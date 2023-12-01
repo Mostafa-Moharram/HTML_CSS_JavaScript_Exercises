@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 15px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.add-task-section {
+    margin: 40px 0 0;
+}
+
+.add-task-section .container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #009688;
+    border-radius: 10px;
+}
+
+.add-task-section input {
+    font-size: 25px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: none;
+    flex: 1;
+    max-width: calc(100% - 55px);
+    color: white;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.add-task-section input::placeholder {
+    color: white;
+}
+
+.add-task-section input:focus {
+    outline: none;
+}
+
+.add-task-section .add {
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    color: #009688;
+    cursor: pointer;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    transition: transform 0.3s;
+}
+
+.add-task-section .add:hover {
+    transform: rotate(90deg);
+}
+
+.tasks-section .container {
+    background-color: #f6f6f6;
+}
+
+.tasks-section .no-tasks-message {
+    color: #777;
+}
+
+.tasks-section div {
+    background-color: white;
+    padding: 10px;
+}
+
+.tasks-section div:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.tasks-section .task .delete {
+    float: right;
+    background-color: #e91e63;
+    padding: 4px 10px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.tasks-section .task.completed {
+    text-decoration: line-through;
+}
+
+.stats-section {
+    font-size: 12px;
+}
+
+.stats-section .tasks-count,
+.stats-section .completed-tasks-count {
+    padding: 10px;
+}
+
+.stats-section .tasks-count {
+    float: left;
+}
+
+.stats-section .completed-tasks-count {
+    float: right;
+}
+
+.stats-section .tasks-count span,
+.stats-section .completed-tasks-count span {
+    color: white;
+    padding: 1px 5px;
+    font-size: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.stats-section .tasks-count span {
+    background-color: #e91e63;
+}
+
+.stats-section .completed-tasks-count span {
+    background-color: #03a9f4;
+}

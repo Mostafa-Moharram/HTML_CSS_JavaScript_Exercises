@@ -1,0 +1,273 @@
+:root {
+    --line-width: 5px;
+    --line-color: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+header {
+    padding: 10px 0;
+}
+
+header .game-title {
+    font-size: 30px;
+}
+
+header .category {
+    font-weight: bold;
+}
+
+header .category .title {
+    color: #0043ff;
+}
+
+header .category .value {
+    color: #ff006a;
+}
+
+.game-draw .container {
+    position: relative;
+    min-height: 500px;
+    background-color: #f7f7f7;
+}
+
+.game-draw .stand {
+    position: absolute;
+    background-color: var(--line-color);
+    height: var(--line-width);
+    width: 200px;
+    top: calc(100% - 20px);
+    left: 50%;
+    transform: translateX(-100%);
+}
+
+.game-draw .stand::before {
+    content: "";
+    position: absolute;
+    height: 400px;
+    width: var(--line-width);
+    background-color: var(--line-color);
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.game-draw .stand::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: var(--line-width);
+    background-color: var(--line-color);
+    bottom: calc(100% + 380px);
+    left: 50%;
+}
+
+.game-draw .rope {
+    position: absolute;
+    width: var(--line-width);
+    height: 100px;
+    background-color: var(--line-color);
+    left: calc(50% + 45px);
+    top: 96px;
+}
+
+.game-draw .rope::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: var(--line-width) dashed var(--line-color);
+    border-radius: 50%;
+    left: -45px;
+    top: 100px;
+}
+
+.game-draw .man-body {
+    width: var(--line-width);
+    height: 150px;
+    background-color: var(--line-color);
+    position: absolute;
+    left: calc(50% + 45px);
+    top: 275px;
+}
+
+.game-draw .man-body .man-head {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: var(--line-width) solid var(--line-color);
+    left: -35px;
+    top: -70px;
+}
+
+.game-draw .man-body .man-hands {
+    position: absolute;
+    width: var(--line-width);
+    height: 1px;
+    left: 0;
+    top: 0;
+}
+
+.game-draw .man-body .man-hands::before,
+.game-draw .man-body .man-hands::after {
+    content: "";
+    position: absolute;
+    height: var(--line-width);
+    width: 60px;
+    top: 20px;
+    background-color: var(--line-color);
+}
+
+.game-draw .man-body .man-hands::before {
+    left: 0;
+    transform: rotate(-30deg);
+}
+
+.game-draw .man-body .man-hands::after {
+    right: 0;
+    transform: rotate(30deg);
+}
+
+.game-draw .man-body .man-legs::before,
+.game-draw .man-body .man-legs::after {
+    content: "";
+    position: absolute;
+    height: var(--line-width);
+    width: 60px;
+    bottom: -15px;
+    background-color: var(--line-color);
+}
+
+.game-draw .man-body .man-legs::before {
+    left: 0;
+    transform: rotate(30deg);
+}
+
+.game-draw .man-body .man-legs::after {
+    right: 0;
+    transform: rotate(-30deg);
+}
+
+.game-draw .stand,
+/* .game-draw .stand::before, */
+/* .game-draw .stand::after, */
+.game-draw .rope,
+/* .game-draw .rope::before, */
+.game-draw .man-body,
+.game-draw .man-head,
+.game-draw .man-body .man-hands,
+.game-draw .man-body .man-legs
+/* .game-draw .man-body .man-hands::before, */
+/* .game-draw .man-body .man-hands::after, */
+/* .game-draw .man-body .man-legs::before, */
+/* .game-draw .man-body .man-legs::after  */
+{
+    visibility: hidden;
+}
+
+/* @media (min-width: 768px) {
+    .game-draw .rope,
+    .game-draw .man-body {
+        left: 410px;
+    }
+}
+
+@media (min-width: 992px) {
+    .game-draw .rope,
+    .game-draw .man-body {
+        left: 520px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .game-draw .rope,
+    .game-draw .man-body {
+        left: 620px;
+    }
+} */
+
+.game-controls .container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-controls .letter {
+    background-color: #03452c;
+    cursor: pointer;
+}
+
+.word {
+    margin: 10px 0;
+}
+
+.word .container {
+    min-height: 67px;
+    padding: 0;
+    background-color: #eee;
+    margin-bottom: 10px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.word .letter {
+    background-color: #777;
+}
+
+.letter {
+    font-size: 40px;
+    padding: 10px 0;
+    color: white;
+    width: 67px;
+    height: 67px;
+}
+
+.inactive-letter {
+    background-color: #777 !important;
+    opacity: 50% !important;
+}

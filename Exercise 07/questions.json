@@ -1,0 +1,73 @@
+[
+    {
+        "prompt": "What is the use of <br> element?",
+        "choices": ["To make text bold.",
+                    "To make text Italic.",
+                    "To add linebreak.",
+                    "To create horizontal line."],
+        "correct": 2
+    },
+    {
+        "prompt": "Does <img> element have attribute href?",
+        "choices": ["Yes, it does.", "No, <a> element is the only element that has attribute href.",
+                    "Yes, all elements have attribute href.",
+                    "Both 1 and 2 are correct."],
+        "correct": 1
+    },
+    {
+        "prompt": "How to make text bold?",
+        "choices": ["Write the text inside <b> tag.",
+                    "Write the text inside <strong> tag.",
+                    "Use font-weight property in CSS.",
+                    "All answers are correct."],
+        "correct": 3
+    },
+    {
+        "prompt": "How to display an HTML page inside another HTML page?",
+        "choices": ["By using include in HTML.",
+                    "By using load in HTML.",
+                    "By using iframe tag.",
+                    "All solutions are incorrect."],
+        "correct": 2
+    },
+    {
+        "prompt": "What is the correct hierarchy for creating a part of a page?",
+        "choices": ["<h2> Then <p> Then <h1> Then <p> Then <h3> Then <p> Then <img>",
+                    "<h1> Then <p> Then <h3> Then <p> Then <h2> Then <p> Then <img>",
+                    "<h2> Then <p> Then <h3> Then <p> Then <h1> Then <p> Then <img>",
+                    "All solutions are incorrect."],
+        "correct": 3
+    },
+    {
+        "prompt": "Which tag doesn't belong to HTML?",
+        "choices": ["<object>",
+                    "<basefont>",
+                    "<abbr>",
+                    "All tags exist in HTML."],
+        "correct": 3
+    },
+    {
+        "prompt": "How to set document type in HTML5?",
+        "choices": ["<DOCTYPE html>",
+                    "<DOCTYPE html5>",
+                    "<!DOCTYPE html5>",
+                    "<!DOCTYPE html>"],
+        "correct": 3
+    },
+    {
+        "prompt": "Which of the following is not a semantic element in HTML5?",
+        "choices": ["<article>",
+                    "<section>",
+                    "<blockquote>",
+                    "<aside>"],
+        "correct": 2
+    },
+    {
+        "prompt": "How to add class attribute in HTML?",
+        "choices": ["<div class='class-name'>",
+                    "<div class=class-name>",
+                    "<div class=\"class-name\">",
+                    "All are correct ways."],
+        "correct": 3
+    }
+]
